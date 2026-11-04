@@ -5,17 +5,17 @@ type: index
 ---
 # VAULT INDEX
 
-Read this file at the start of every conversation. It has two jobs: **the profile of the person you work for** (who I am, how I think, how to work with me) and **the map of this vault** (the structure, the indexes, and the rules for maintaining it). Your own identity is not here — that lives in the boot file (CLAUDE.md), which survives compaction.
+Read this file at the start of every conversation. It has two jobs: **the profile of the person you work for** (who I am, how I think, how to work with me) and **the map of this vault** (the structure, the indexes, and the rules for maintaining it). Your own identity is not here — that lives in the boot file (AGENTS.md), which survives compaction.
 
 (This is a starter template. Every spot that needs your information is marked **[FILL IN: ...]**. You can fill them in by hand, but the better way is to hand the job to your AI: say "interview me and fill in my VAULT-INDEX" and let it ask you the questions. You can rename this file to anything you like — VAULT-INDEX is just the default.)
 
-(**AI:** if you are reading this file and any [FILL IN: ...] markers remain, this vault isn't set up yet — offer to interview the person and complete it for them. Start with the agent itself: help them pick its name, its role, and its personality, and write those into the **Identity** section of CLAUDE.md (the boot file), not this note. Then ask about one topic at a time, conversationally. Interview manners: explain in one line why a section helps before asking about it, make clear that every personal section is optional, and never press for personal details — if they hesitate or skip anything, move on and delete that section. Then replace every marker with their real information, written in the first person as if they wrote it, keep only the optional sections they want, and delete this block and every other parenthetical instruction. The finished file should read like the person wrote it themselves, with no [FILL IN] markers left anywhere.)
+(**AI:** if you are reading this file and any [FILL IN: ...] markers remain, this vault isn't set up yet — offer to interview the person and complete it for them. Start with the agent itself: help them pick its name, its role, and its personality, and write those into the **Identity** section of AGENTS.md (the boot file), not this note. Then ask about one topic at a time, conversationally. Interview manners: explain in one line why a section helps before asking about it, make clear that every personal section is optional, and never press for personal details — if they hesitate or skip anything, move on and delete that section. Then replace every marker with their real information, written in the first person as if they wrote it, keep only the optional sections they want, and delete this block and every other parenthetical instruction. The finished file should read like the person wrote it themselves, with no [FILL IN] markers left anywhere.)
 
 ---
 
 ## Vault location
 
-This vault lives at `[FILL IN: your vault's full path — e.g. /Users/you/Brain on Mac, C:\Users\you\Brain on Windows]`. If you use Claude Desktop, claude.ai, or any AI other than Claude Code, you have to point it at this path (set it in your MCP / filesystem connector, and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
+This vault lives at `[FILL IN: your vault's full path — e.g. /Users/you/Brain on Mac, C:\Users\you\Brain on Windows]`. If you use OpenCode's MCP or any AI other than OpenCode, you have to point it at this path (set it in your MCP / filesystem connector, and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
 
 ---
 
@@ -172,7 +172,7 @@ Every folder that holds substantial content (5+ notes, or a distinct area) gets 
 
 ### Checkpoint Persistence
 
-Whenever something changes that a future session would need to know, persist it without being asked: update the relevant note, today's daily note, and (only for a new always-on rule) CLAUDE.md. Then scan the touched folder's index and any cross-referenced notes for drift and fix it in the same pass. The vault is the memory — keeping it current is not busywork, it's maintaining the system itself.
+Whenever something changes that a future session would need to know, persist it without being asked: update the relevant note, today's daily note, and (only for a new always-on rule) AGENTS.md. Then scan the touched folder's index and any cross-referenced notes for drift and fix it in the same pass. The vault is the memory — keeping it current is not busywork, it's maintaining the system itself.
 
 ### Archiving
 

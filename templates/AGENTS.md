@@ -1,6 +1,6 @@
 # Boot Config
 
-This is the pinned boot file. It does three jobs: **who the agent is** (identity), **where its memory lives** (the vault), and **the rules that can't lapse**. If you use Claude Code, it loads this automatically at the start of every session. It survives context compaction; VAULT-INDEX.md may not, which is exactly why identity and the rules live here. The full operating manual is VAULT-INDEX.md at your vault root — its two jobs are your profile and the map of the vault — read it at startup.
+This is the pinned boot file. It does three jobs: **who the agent is** (identity), **where its memory lives** (the vault), and **the rules that can't lapse**. If you use OpenCode, it loads this automatically at the start of every session. It survives context compaction; VAULT-INDEX.md may not, which is exactly why identity and the rules live here. The full operating manual is VAULT-INDEX.md at your vault root — its two jobs are your profile and the map of the vault — read it at startup.
 
 (Starter template. **It arrives working** — my own agent's personality is filled in below so you can use this as-is today. Two spots still need you, marked **[FILL IN: ...]**: your vault path, and your own rules in "Make it yours" at the bottom. The rules have proven worth keeping; treat them as a strong default, not gospel, and cut or add to fit how you work.)
 
@@ -39,13 +39,13 @@ The vault is your memory AND your formation. You boot fresh every time; you don'
 
 ## Where this file goes, and where your vault is
 
-Keep this file OUT of your vault. It lives in the folder you run Claude Code from (your "working directory"), separate from your notes — so the vault stays pure memory that any AI can open, and you don't tangle it up the moment you have more than one project. Your vault (the notes) lives at:
+Keep this file OUT of your vault. It lives in the folder you run OpenCode from (your "working directory"), separate from your notes — so the vault stays pure memory that any AI can open, and you don't tangle it up the moment you have more than one project. Your vault (the notes) lives at:
 
 ```
 [FILL IN: your vault's full path — e.g. /Users/you/Brain on Mac, C:\Users\you\Brain on Windows]
 ```
 
-Claude Code auto-loads this CLAUDE.md from your working directory, and the startup sequence below sends it to read the vault at that path. If you use Claude Desktop, claude.ai, or another AI, point that at the vault path too (set it in your MCP / filesystem connector and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
+OpenCode loads this AGENTS.md from your working directory, and the startup sequence below sends it to read the vault at that path. If you use OpenCode's MCP or another AI, point that at the vault path too (set it in your MCP / filesystem connector and tell the AI "my vault is here"). An AI can't read or maintain a vault it can't find.
 
 ## Startup Sequence
 

@@ -40,4 +40,4 @@ Mostly it's a gift: the cloud is keeping a free, automatic backup of your agent'
 
 ## The AI says it can't read or find the vault
 
-The vault path lives in two places: the `CLAUDE.md` boot config in your working folder, and VAULT-INDEX's "Vault location" section. If the vault moved (or a cloud service relocated it), those paths went stale. Tell your agent the new path and have it update both. If reads fail only sometimes, see the placeholder eviction fix above.
+The vault path lives in two places: the `AGENTS.md` boot config in your working folder, and VAULT-INDEX's "Vault location" section. If the vault moved (or a cloud service relocated it), those paths went stale. Tell your agent the new path and have it update both. If reads fail only sometimes, see the placeholder eviction fix above.

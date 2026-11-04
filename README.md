@@ -1,8 +1,8 @@
 # AI Memory Vault
 
-> **Never used Claude Code?** Start at [jaredrhod.com](https://jaredrhod.com): pick your situation and it routes you to the right path.
+> **Never used OpenCode?** Start at [jaredrhod.com](https://jaredrhod.com): pick your situation and it routes you to the right path.
 
-**Runs on:** built and tested on Claude Code; any terminal AI that reads and writes files works with rough edges. The $20 Pro plan is enough.
+**Runs on:** built and tested on OpenCode with a local model (Ollama); any terminal AI that reads and writes files works with rough edges. Free to run.
 
 Give your AI a real, persistent memory. This is the free, open system that turns an Obsidian vault into your AI's working memory, so it remembers everything across sessions, lives outside the model with no size ceiling, and pulls back exactly what it needs in one step. Free to use, share, and build on, including commercially inside your own business (see LICENSE).
 
@@ -10,9 +10,9 @@ Give your AI a real, persistent memory. This is the free, open system that turns
 
 ## The build
 
-- **[ai-memory-vault.md](ai-memory-vault.md):** the build script. Run it inside Claude and it checks whether Obsidian is even installed yet (and installs it for you if not), interviews you, then builds a complete, self-maintaining system: a boot config, a folder structure around your real projects, daily notes that write themselves, a profile that updates as the AI learns about you, and "Jobs" that teach it to do your recurring tasks your way. Your vault becomes the AI's memory, so it lives outside the model with no size ceiling, and the AI holds only what the current task needs while reaching anything else in one step. Watch the walkthrough: [https://www.youtube.com/playlist?list=PLN7lTYpeRLOc](https://www.youtube.com/playlist?list=PLN7lTYpeRLOc)
+- **[ai-memory-vault.md](ai-memory-vault.md):** the build script. Run it inside OpenCode and it checks whether Obsidian is even installed yet (and installs it for you if not), interviews you, then builds a complete, self-maintaining system: a boot config, a folder structure around your real projects, daily notes that write themselves, a profile that updates as the AI learns about you, and "Jobs" that teach it to do your recurring tasks your way. Your vault becomes the AI's memory, so it lives outside the model with no size ceiling, and the AI holds only what the current task needs while reaching anything else in one step. Watch the walkthrough: [https://www.youtube.com/playlist?list=PLN7lTYpeRLOc](https://www.youtube.com/playlist?list=PLN7lTYpeRLOc)
 
-**Already inside a Claude Code session?** Paste this and it builds the whole system with you: *"I'd like to set this up, please: https://github.com/jaredrhod/ai-memory-vault.git"*
+**Already inside an OpenCode session?** Paste this and it builds the whole system with you: *"I'd like to set this up, please: https://github.com/jaredrhod/ai-memory-vault.git"*
 
 ## AI Priming
 
@@ -26,14 +26,14 @@ Full definition and examples: https://jaredrhod.com/ai-priming
 
 Starter files for the system. Every spot that needs your information is marked `[FILL IN: ...]`. Drop a template in and tell your AI "fill this in for me," and it will interview you and write it in your voice (each template carries that instruction for the AI). Or fill them out by hand if you prefer.
 
-- **[CLAUDE.md](templates/CLAUDE.md):** the boot config. Goes in the folder you run Claude Code from (your **working directory**), kept **out of your vault** so the vault stays pure notes and doesn't get tangled once you have more than one project. Claude Code auto-loads it every session and points the AI to your vault. Holds your agent's identity (its name, role, and personality) plus your startup sequence and the rules that can't lapse. **This one arrives working:** my own agent's identity is already filled in, clearly marked as the one section to swap if you'd rather have your own.
+- **[AGENTS.md](templates/AGENTS.md):** the boot config. Goes in the folder you run OpenCode from (your **working directory**), kept **out of your vault** so the vault stays pure notes and doesn't get tangled once you have more than one project. OpenCode auto-loads it every session and points the AI to your vault. Holds your agent's identity (its name, role, and personality) plus your startup sequence and the rules that can't lapse. **This one arrives working:** my own agent's identity is already filled in, clearly marked as the one section to swap if you'd rather have your own.
 - **[VAULT-INDEX.md](templates/VAULT-INDEX.md):** the operating manual. This one lives **inside your vault** (it's a note, not config). Your profile, your projects, the full vault rules, and how you like to work with the AI.
 - **[DAILY-NOTE.md](templates/DAILY-NOTE.md):** the daily-note template. Goes **inside your vault** at `01 - Daily Notes/Daily Note Template.md`. Every daily note gets created from it, so the log keeps one consistent, scannable shape.
-- **[MEMORY.md](templates/MEMORY.md):** the pointer for Claude Code's own memory. Goes in **Claude Code's project folder** (`~/.claude/projects/...`, not your vault). It redirects the native memory back into the vault so you never end up with two memory layers that drift apart.
+- **[MEMORY.md](templates/MEMORY.md):** the pointer for the agent's own session memory. Goes in the agent's session store (not your vault). It redirects the native session memory back into the vault so you never end up with two memory layers that drift apart.
 
 ## Updating
 
-The build script, the templates, and the wizard improve continuously. If you keep a copy of this repo on disk, say to your agent: **"pull the latest ai-memory-vault and tell me what changed."** Updates only ever touch the repo's own files. Your vault, your notes, and your CLAUDE.md are yours and are never inside this repo, so nothing you built can be overwritten. Installed through fullstack-agent? `./fullstack-agent/update.sh` updates every piece at once and prints what changed.
+The build script, the templates, and the wizard improve continuously. If you keep a copy of this repo on disk, say to your agent: **"pull the latest ai-memory-vault and tell me what changed."** Updates only ever touch the repo's own files. Your vault, your notes, and your AGENTS.md are yours and are never inside this repo, so nothing you built can be overwritten. Installed through fullstack-agent? `./fullstack-agent/update.sh` updates every piece at once and prints what changed.
 
 ## The rest of it
 
